@@ -1,0 +1,60 @@
+
+  <div class="page-container">
+    <div class="account">
+      <h1>Create An Account</h1>
+      <!-- <p>Are you hosting a Bitcoin event and want your Bitbuddies to pay you? Sign up today to get started.
+      </p> -->
+        <div class="form-group">
+          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+
+            <div class="input-field">
+              <%= f.label :first_name %><br>
+              <%= f.text_field :first_name %>
+
+              <div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div class="input-field">
+               <%= f.label :last_name %><br>
+              <%= f.text_field :last_name %>
+
+              <div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div class="input-field">
+               <%= f.label :date_of_birth %><br>
+              <%= f.date_field :date_of_birth %>
+              <div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div class="input-field">
+              <%= f.label :avatar %></br>
+              <%= f.file_field :avatar %>
+              <div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div class="input-field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, :autofocus => true %><div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div class="input-field">
+              <%= f.label :password %><br/>
+              <%= f.password_field :password %><div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+             <div class="input-field">
+              <%= f.label :password_confirmation %><br />
+             <%= f.password_field :password_confirmation %><div class="tooltip"><i class="fa fa-arrow-left"></i>
+              </div>
+            </div>
+            <div class="checkbox">
+              <label for="agreement"> <input type="checkbox" value="agreement" id="agreement">Sell your soul for Bitcoin?</label><div class="tooltip"><i class="fa fa-arrow-left"></i></div>
+            </div>
+            <div>
+              <button type="submit">Sign Up</button>
+
+              <% end %>
+            </div>
+
+        </div>
+      </div>
+  </div>
+
+
+<!--  <%= render "attendees/shared/links" %> -->
